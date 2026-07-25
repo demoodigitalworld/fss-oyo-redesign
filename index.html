@@ -1,4 +1,3 @@
-
 ---
 layout: default
 ---
@@ -6,8 +5,8 @@ layout: default
   <section id="hero" class="hero-section" aria-label="Hero Carousel">
     <div class="hero-slider">
       <!-- Slide 1: Convocation -->
-      
-	<div class="slide active" style="background-image: url('images/FSS Gate.jpg')">
+
+	<div class="slide active" style="background-image: url('{{ "/images/FSS Gate.jpg" | relative_url }}')">
         <div class="container slide-content">
           <h1>
             <span class="reveal">Centre of Excellence in</span>
@@ -26,56 +25,10 @@ layout: default
         </div>
         <div class="overlay"></div>
       </div>
-		
-		
-		
-		
-		
-		<!--<div
-        class="slide active"
-        style="background-image: url('images/22nd convocation ceremony.png')"
-      >
-        <div class="container slide-content">
-          <h1>
-            <span class="reveal">22nd Convocation Ceremony</span>
-            <span class="text-highlight reveal"
-              >Thursday, 11 December 2025</span
-            >
-          </h1>
-          <p class="reveal">
-            Celebrating Excellence and Academic Achievement at the Federal
-            School of Surveying, Oyo.
-          </p>
-          <div class="hero-actions reveal">
-            <a href="#events" class="btn btn-primary btn-lg"
-              >View Event Details</a
-            >
-          </div>
-        </div>
-        <div class="overlay"></div>
-      </div>-->
 
-      
-		
-		
-		
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<!-- Slide 2: General -->
-		
-		
-		<div
-        class="slide" style="background-image: url('images/22nd convocation ceremony.png')"
+      <!-- Slide 2: General -->
+      <div
+        class="slide" style="background-image: url('{{ "/images/22nd convocation ceremony.png" | relative_url }}')"
       >
         <div class="container slide-content">
           <h1>
@@ -96,30 +49,9 @@ layout: default
         </div>
         <div class="overlay"></div>
       </div>
-
-		
-   <!--   <div class="slide" style="background-image: url('images/FSS Gate.jpg')">
-        <div class="container slide-content">
-          <h1>
-            <span class="reveal">Centre of Excellence in</span>
-            <span class="text-highlight reveal">Geospatial Sciences</span>
-          </h1>
-          <p class="reveal">
-            Training world-class professionals in Surveying, Geoinformatics, and
-            related technologies since 1908.
-          </p>
-          <div class="hero-actions reveal">
-            <a href="#admissions" class="btn btn-primary btn-lg">Apply Now</a>
-            <a href="#programmes" class="btn btn-outline btn-lg"
-              >Explore Courses</a
-            >
-          </div>
-        </div>
-        <div class="overlay"></div>
-      </div>-->
 
       <!-- Slide 3: Admissions -->
-      <div class="slide" style="background-image: url('images/Picture3.jpg')">
+      <div class="slide" style="background-image: url('{{ "/images/Picture3.jpg" | relative_url }}')">
         <div class="container slide-content">
           <h1>
             <span class="reveal">Admissions Ongoing</span>
@@ -151,7 +83,7 @@ layout: default
   </section>
 
   <!-- Announcements Ticker -->
-   
+
   <div class="announcement-bar">
     <div class="container ticker-wrap">
       <span class="ticker-label">Latest Updates:</span>
@@ -199,9 +131,8 @@ layout: default
     <div class="container">
       <div class="grid grid-2 align-center">
         <div class="rector-image reveal reveal-left">
-          <!-- Placeholder image, user to update -->
           <img
-            src="images/Rector.jpg"
+            src="{{ "/images/Rector.jpg" | relative_url }}"
             alt="Rector of FSS Oyo"
             class="rector-img-style"
           />
@@ -233,7 +164,7 @@ layout: default
             </p>
           </div>
           <img
-            src="images/signature.png"
+            src="{{ "/images/signature.png" | relative_url }}"
             alt="Rector's Signature"
             class="signature-img"
             style="opacity: 0.6; margin-top: 1rem; max-width: 150px"
@@ -280,13 +211,13 @@ layout: default
               </div>
             </div>
           </div>
-          <a href="<%= ResolveUrl("~/pages/about/about-us.aspx") %>#historyBg" class="btn btn-secondary"
+          <a href="{{ "/pages/about/about-us.html" | relative_url }}#historyBg" class="btn btn-secondary"
             >Read History</a
           >
         </div>
         <div class="about-image reveal reveal-zoom">
           <img
-            src="images/Picture3.jpg"
+            src="{{ "/images/Picture3.jpg" | relative_url }}"
             alt="FSS Students in Lab"
             loading="lazy"
           />
@@ -311,26 +242,7 @@ layout: default
         </p>
       </div>
 
-      <!--<div class="filter-bar">
-        <button type="button" class="filter-btn active" data-filter="all">
-          All
-        </button>
-        <button type="button" class="filter-btn" data-filter="surveying">
-          Surveying
-        </button>
-        <button type="button" class="filter-btn" data-filter="cartography">
-          Cartography
-        </button>
-        <button type="button" class="filter-btn" data-filter="science">
-          Sciences
-        </button>
-		<button type="button" class="filter-btn" data-filter="science">
-          Sciences
-        </button>
-      </div>-->
-		
-		
-		<div class="filter-bar">
+      <div class="filter-bar">
         <button type="button" class="filter-btn active" data-filter="all">
           All
         </button>
@@ -347,8 +259,6 @@ layout: default
           POST GRADUATE DIPLOMA IN GIS (PGD GIS)
         </button>
       </div>
-		
-		
 
       <div id="programmes-grid" class="grid grid-3">
         <!-- Populated by JS -->
@@ -374,7 +284,6 @@ layout: default
           <div class="card events-card">
             <h3 class="text-center">Upcoming Events</h3>
             <div class="calendar-widget text-center">
-              <!-- Simple CSS Calendar placeholder -->
               <div class="calendar-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
                 <button id="cal-prev" type="button" style="background:none; border:none; cursor:pointer;"><i class="fa fa-chevron-left"></i></button>
                 <div id="calendar-month" class="current-month" style="font-weight: bold;">January 2026</div>
@@ -401,8 +310,6 @@ layout: default
                   <p>Academic Board Meeting: 11th May &mdash; 13th May</p>
                 </div>
               </li>
-			
-				
               <li>
                 <span class="event-date">15 <strong>Jun</strong></span>
                 <div class="event-info">
@@ -430,17 +337,12 @@ layout: default
       <div class="cta-inner">
         <div class="cta-content reveal reveal-zoom">
           <h2>Ready to Start Your Journey?</h2>
-          
-			
+
 			<p>
             Apply to Federal School of Surveying, Oyo.
             Check the requirements and apply today.
           </p>
-          
-			<!--<p>
-            Admissions for the 2024/2025 academic session are currently ongoing.
-            Check the requirements and apply today.
-          </p>-->
+
           <div class="cta-btns">
             <a
               href="https://applications.fss-oyo.edu.ng/"
