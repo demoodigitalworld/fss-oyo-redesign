@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ '/images/FSS_LOGO.png' | relative_url }}" />
+
+    <meta name="description" content="Federal School of Surveying, Oyo — Premier institution for Geospatial & Surveying education in Nigeria. Admissions, news, and academic programmes." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="top-bar">
+        <div class="container top-bar-inner">
+          <div class="contact-info">
+            <a href="tel:+2348138261833"><i class="fa fa-phone"></i> +234-813 826 1833</a>
+            <a href="mailto:official@fss-oyo.edu.ng"><i class="fa fa-envelope"></i> official@fss-oyo.edu.ng</a>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="X (formerly Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-header">
+        <div class="container header-inner">
+          <a href="{{ '/' | relative_url }}" class="brand">
+            <img src="{{ '/images/FSS_LOGO.png' | relative_url }}" alt="FSS Oyo Logo" width="60" height="60" />
+            <div class="brand-text">
+              <span class="brand-name">Federal School of Surveying</span>
+              <span class="brand-location">Oyo, Nigeria</span>
+            </div>
+          </a>
+
+          <button class="mobile-toggle" aria-controls="primary-navigation" aria-expanded="false" type="button">
+            <span class="sr-only">Menu</span>
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <nav id="primary-navigation" class="primary-nav">
+            <ul class="nav-list">
+              <button class="mobile-close-btn" type="button">
+                <i class="fa fa-times"></i>
+              </button>
+              <li><a href="{{ '/' | relative_url }}" data-link="home">Home</a></li>
+              <li class="has-dropdown">
+                <a href="{{ '/#about' | relative_url }}" data-link="school">The School <i class="fa fa-chevron-down" style="font-size: 0.7em; margin-left: 4px"></i></a>
+                <div class="mega-menu">
+                  <div class="mega-grid">
+                    <div class="mega-col about-col">
+                      <h4>About Us</h4>
+                      <p>Established in 1908, the Federal School of Surveying, Oyo is the premier institution for surveying and geoinformatics in Nigeria, dedicated to excellence in training and research.</p>
+                      <a href="{{ '/pages/about/about-us.html' | relative_url }}" class="learn-more">Read More &rarr;</a>
+                    </div>
+                    <div class="mega-col">
+                      <h4>FSS</h4>
+                      <ul>
+                        <li><a href="{{ '/pages/about/vision-mission.html' | relative_url }}">Vision & Mission</a></li>
+                        <li><a href="{{ '/pages/about/anthem.html' | relative_url }}">School Anthem</a></li>
+                        <li><a href="{{ '/pages/about/about-us.html' | relative_url }}">About Us</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-col">
+                      <h4>Administration</h4>
+                      <ul>
+                        <li><a href="{{ '/pages/about/visitor.html' | relative_url }}">The Visitor</a></li>
+                        <li><a href="{{ '/pages/about/governing-council.html' | relative_url }}">Governing Council</a></li>
+                        <li><a href="{{ '/pages/about/academic-board.html' | relative_url }}">Academic Board</a></li>
+                        <li><a href="{{ '/pages/about/principal-officers.html' | relative_url }}">Principal Officers</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="has-dropdown">
+                <a href="{{ '/#programmes' | relative_url }}">Academics <i class="fa fa-chevron-down"></i></a>
+                <div class="mega-menu">
+                  <div class="mega-grid mega-grid-3">
+                    <div class="mega-col about-col">
+                      <h4>Faculties</h4>
+                      <p>There are 2 faculties in Federal School of Surveying, Oyo namely: Faculty of Geospatial Sciences and Faculty of Pure & Applied Sciences.</p>
+                    </div>
+                    <div class="mega-col">
+                      <h4>Faculty of Geospatial Sciences</h4>
+                      <ul>
+                        <li><a href="#">Surveying & Geoinformatics</a></li>
+                        <li><a href="#">Cartography & GIS</a></li>
+                        <li><a href="#">Photogrammetry & Remote Sensing</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-col">
+                      <h4>Faculty of Pure & Applied Sciences</h4>
+                      <ul>
+                        <li><a href="#">Computer Science</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="has-dropdown">
+                <a href="{{ '/#admissions' | relative_url }}">Admissions <i class="fa fa-chevron-down"></i></a>
+                <ul class="simple-dropdown">
+                  <li><a href="{{ '/pages/about/admission-requirements.html' | relative_url }}" target="_blank">Admission Requirements</a></li>
+                  <li><a href="https://portal.fss-oyo.edu.ng/" target="_blank">Admission Portal</a></li>
+                </ul>
+              </li>
+              <li class="has-dropdown">
+                <a href="#">Portal Login <i class="fa fa-chevron-down"></i></a>
+                <ul class="simple-dropdown">
+                  <li><a href="https://portal.fss-oyo.edu.ng/" target="_blank">Students Portal <span class="italic">(Freshers)</span></a></li>
+                  <li><a href="https://studentportal.fss-oyo.edu.ng/login" target="_blank">Students Portal <span class="italic">(Returning)</span></a></li>
+                  <li><a href="https://portal.fss-oyo.edu.ng/" target="_blank">Staff Portal</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="{{ '/pages/about/events.html' | relative_url }}">Events</a>
+              </li>
+              <li>
+                <a href="{{ '/#contact' | relative_url }}" class="btn btn-sm btn-primary">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top grid grid-4">
+          <div class="footer-brand reveal stagger-delay">
+            <img src="{{ '/images/FSS_LOGO.png' | relative_url }}" alt="Logo" width="50" />
+            <h4>Federal School of Surveying</h4>
+            <p>Building the future of Geospatial Sciences in Nigeria.</p>
+          </div>
+
+          <div class="footer-links reveal stagger-delay">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="{{ '/#about' | relative_url }}">About Us</a></li>
+              <li><a href="{{ '/#programmes' | relative_url }}">Programmes</a></li>
+              <li><a href="{{ '/#admissions' | relative_url }}">Admissions</a></li>
+              <li><a href="#portal">Student Portal</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links reveal stagger-delay">
+            <h5>Resources</h5>
+            <ul>
+              <li><a href="#">Library</a></li>
+              <li><a href="#">Alumni</a></li>
+              <li><a href="http://webmail.fss-oyo.edu.ng/" target="_blank">Staff Mail</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links reveal stagger-delay">
+            <h5>Downloads</h5>
+            <ul>
+              <li><a href="#"><i class="fa fa-file-pdf"></i> Academic Calendar</a></li>
+              <li><a href="#"><i class="fa fa-file-pdf"></i> Students' Handbook</a></li>
+              <li><a href="#"><i class="fa fa-file-pdf"></i> School Fees Schedule</a></li>
+              <li><a href="#"><i class="fa fa-file-pdf"></i> Fees Structure</a></li>
+              <li><a href="#"><i class="fa fa-file-pdf"></i> First Semester Exam Schedule</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-newsletter reveal stagger-delay">
+            <h5>Search the site</h5>
+            <p>Quickly find pages and documents across the site.</p>
+            <div class="footer-search-inline">
+              <input id="footer-search-input" type="search" placeholder="Search the site, e.g. 'admissions' or 'NBTE'" aria-label="Search the site" />
+              <button id="footer-search-btn" aria-label="Search"><i class="fa fa-search"></i></button>
+            </div>
+            <div id="footer-search-results" class="footer-search-results" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="footer-bottom footer-links">
+          <p>
+            &copy; <span id="current-year">{{ 'now' | date: '%Y' }}</span> FSS OYO. All rights reserved.
+          </p>
+          <div class="bottom-links">
+            <span>Powered by FSS IMS/ICT</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        window.siteRoot = '{{ "/" | relative_url }}';
+
+        // Prevent Enter key in search inputs from submitting forms
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && (e.target.id === 'footer-search-input' || e.target.id === 'modal-search-input')) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+        });
+    </script>
+    <script src="{{ '/js/components.js' | relative_url }}"></script>
+    <script src="{{ '/js/main.js' | relative_url }}" defer></script>
+</body>
+</html>
