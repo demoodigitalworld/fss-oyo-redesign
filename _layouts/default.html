@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head runat="server">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Federal School of Surveying, Oyo</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="icon" type="image/x-icon" href="/images/FSS_LOGO.png")>
 
     <meta name="description" content="Federal School of Surveying, Oyo — Premier institution for Geospatial & Surveying education in Nigeria. Admissions, news, and academic programmes." />
@@ -17,13 +17,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    <!--<link rel="stylesheet" href="/css/style.css">-->
+
+    <link rel="stylesheet" href="{{"/css/style.css"}}">
+	
+
     
     <!--<asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>-->
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1">
         <!-- Header -->
         <header class="site-header">
           <div class="top-bar">
@@ -145,8 +149,10 @@
         </header>
 
         <main id="main-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
+            <!--<asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>-->
+
+			{{ content }}
         </main>
 
         <!-- Footer -->
